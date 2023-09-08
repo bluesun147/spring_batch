@@ -21,7 +21,8 @@ public class CsvScheduleWriter implements ItemWriter<ScheduleDto> {
 
         items.forEach(getScheduleDto -> {
             Schedule schedule = getScheduleDto.toEntity();
-            scheduleList.add(schedule);
+            // db에 저장하는 코드
+            // scheduleList.add(schedule);
         });
         scheduleRepository.saveAll(scheduleList);
     }
