@@ -1,0 +1,31 @@
+spring:
+  batch:
+    # meta data table auto create
+    jdbc:
+      initialize-schema: always
+    job:
+#      names: ${job.name:NONE}
+      # to run test, should specify name
+       names: multipleDBJob
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate.format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # from multidb1 to multidb2
+  db1:
+    datasource:
+      jdbc-url: jdbc:mariadb://localhost:3306/multidb1?serverTimezone=Asia/Seoul
+      username: root
+      password: bluesun
+
+  db2:
+    datasource:
+      jdbc-url: jdbc:mariadb://localhost:3306/multidb2?serverTimezone=Asia/Seoul
+      username: root
+      password: bluesun
