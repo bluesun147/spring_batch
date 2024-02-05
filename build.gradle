@@ -17,6 +17,11 @@ configurations {
 	}
 }
 
+// 빌드 후 생성되는 라이브러리에 (기존엔 2개 파일 존재) 옛날 것 백업 안됨
+jar {
+	enabled = false
+}
+
 repositories {
 	mavenCentral()
 }
@@ -25,7 +30,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.mysql:mysql-connector-j'
+//	runtimeOnly 'com.mysql:mysql-connector-j'
+	// mysql에서 mariaDB로 변경
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
