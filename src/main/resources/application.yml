@@ -11,9 +11,9 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-#      names: ${job.name:NONE}
+      names: ${job.name:NONE}
       # to run test, should specify name
-       names: jpaPageJob
+#      names: jpaPageFlowJob
   main:
     allow-bean-definition-overriding: true
   jpa:
