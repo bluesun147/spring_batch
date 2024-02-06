@@ -1,0 +1,4 @@
+[submodule "multiDB2"]
+	path = multiDB2
+	url = https://github.com/bluesun147/spring_batch.git
+	branch = multiDB
