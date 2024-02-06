@@ -1,0 +1,29 @@
+logging:
+  level:
+    root: info
+    com.example.parallel: debug
+
+spring:
+  profiles:
+    active: window
+  batch:
+    # meta data table auto create
+    jdbc:
+      initialize-schema: always
+    job:
+#      names: ${job.name:NONE}
+      # to run test, should specify name
+       names: jpaPageJob
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate.format_sql: true
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    show-sql: true
+  datasource:
+    username: root
+    password: bluesun
