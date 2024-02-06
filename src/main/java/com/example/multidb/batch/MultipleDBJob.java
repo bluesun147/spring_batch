@@ -24,6 +24,7 @@ import javax.sql.DataSource;
 
 // 다중 데이터베이스 환경
 // multidb1의 dept1에서 multidb2의 dept2로
+// 파라미터 : --job.name=multipleDBJob version=2
 
 @Slf4j
 @Configuration
