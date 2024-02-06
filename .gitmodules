@@ -2,3 +2,7 @@
 	path = multiDB2
 	url = https://github.com/bluesun147/spring_batch.git
 	branch = multiDB
+[submodule "parallel"]
+	path = parallel
+	url = https://github.com/bluesun147/spring_batch.git
+	branch = multiDB
